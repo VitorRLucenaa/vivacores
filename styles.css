@@ -1,66 +1,64 @@
-.tudo{
+.tudo {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  margin-top: -20px; /* puxa para cima, por baixo do header */
-  border-radius: 0 0 16px 16px; /* cantos arredondados no topo, se quiser */
+  margin-top: -20px;
+  border-radius: 0 0 16px 16px;
   background-color: #fff;
   z-index: 1;
   position: relative;
   margin-left: 80px;
   margin-right: 80px;
+  padding: 20px;
 }
 
 body {
   background-color: #6c3c0c;
 }
 
-hr{
+hr {
   margin: 200px;
 }
 
-h1{
+h1 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin: 20px;
   margin-bottom: 20px;
 }
 
-p{
+p {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .imgheader {
-  width: 110%; /* Ajusta a largura para caber no container */
-  height: 700px; 
-  border: none;/* ajusta a largura para caber no container */
-  transform: translateY(-8px) translateX(-100px);
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
   z-index: 2;
   position: relative;
   -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 98%, transparent 100%);
 }
 
-/* Para o conteúdo "Quem Somos" com a imagem e texto lado a lado */
 .QuemSomos {
   padding-top: 5px;
   position: relative;
   z-index: 1;
 }
+
 .QuemSomos .conteudo {
   display: flex;
   align-items: center;
   gap: 20px;
-  max-width: 1000px;  /* opcional, para limitar largura */
-  margin: 0 auto; /* centraliza o bloco */
+  max-width: 1000px;
+  margin: 0 auto;
   font-size: 26px;
   padding-top: 40px;
 }
 
-/* Ajuste da imagem de encaixe */
 .imgencaixe {
-  width: 40%;  /* Ajuste o tamanho para ficar legal */
+  width: 40%;
   height: auto;
 }
 
-/* Para a imagem do produto base */
 .imgbase {
   width: 40%;
   height: auto;
@@ -68,12 +66,11 @@ p{
   margin-bottom: 15px;
 }
 
-/* Espaçamento entre as seções pode ser feito com margin */
-.produtos .conteudoP{
+.produtos .conteudoP {
   display: flex;
   gap: 20px;
-  max-width: 1000px;  /* opcional, para limitar largura */
-  margin: 0 auto; /* centraliza o bloco */
+  max-width: 1000px;
+  margin: 0 auto;
   font-size: 26px;
   padding-top: 40px;
 }
@@ -87,11 +84,11 @@ p{
 }
 
 .paragrafoR {
-  max-width: 1020px; /* 500 + 500 + 20px de gap */
+  max-width: 1020px;
   margin: 20px auto;
   font-size: 26px;
   line-height: 1.6;
-  padding: 0 10px; /* para não encostar nas bordas se for tela menor */
+  padding: 0 10px;
   padding-top: 40px;
 }
 
@@ -107,8 +104,11 @@ footer {
 
 @media (max-width: 768px) {
   .QuemSomos .conteudo,
-  .produtos .conteudoP {
+  .produtos .conteudoP,
+  .conteudoR {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .imgencaixe,
@@ -119,19 +119,23 @@ footer {
     height: auto;
   }
 
-  .conteudoR {
-    flex-wrap: wrap;
-  }
-
-  /* Ajuste das margens para caber na tela pequena */
   .tudo {
     margin-left: 10px !important;
     margin-right: 10px !important;
   }
 
-  /* Reduzir tamanho do texto para celular */
-  h1, p {
+  h1 {
+    font-size: 22px !important;
+  }
+
+  p,
+  .paragrafoR {
     font-size: 18px !important;
+  }
+
+  .imgheader {
+    height: 200px;
+    object-fit: cover;
   }
 
   hr {
