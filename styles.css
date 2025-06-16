@@ -18,13 +18,15 @@ body {
 .imgheader {
   width: 100%;
   height: auto;
-  max-height: 300px;
+  max-height: 400px;
   object-fit: cover;
-  z-index: 2;
+  object-position: center top;
+  display: block;
   position: relative;
   -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 98%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
 }
+
 
 /* Títulos e textos */
 h1 {
